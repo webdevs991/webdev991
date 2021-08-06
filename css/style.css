@@ -1,0 +1,572 @@
+/* My Colors data goes here */
+:root{
+    --pcPrimaryColor: #02BBCD;
+    --pcSecondaryColor: #00113C;
+    --pcTextPrimary: #F6B524;
+    --pcTextSecondary: white;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+/*====== Buttons ========*/
+.pcBtnPrimary{
+    background-image: url('../assest/img/buttonBackground.svg');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-x: 300%;
+
+    background-color: var(--pcTextPrimary);
+    padding: 5px 40px;
+    color: var(--pcTextSecondary);
+    margin-right: 10px;
+}
+.pcBtnPrimary:hover{
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.123);
+    background-position-x: 0%;
+    transition: background-position-x 550ms ease-out;
+}
+
+
+/* ====== Text Dual ===== */
+.pcTitlePrimary{
+    color: var(--pcTextPrimary);
+    margin-right: 15px;
+}
+.pcTitleSecondary{
+    color: var(--pcTextSecondary);
+}
+
+
+/* ====== Animation ======*/
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .fadeIn 
+  {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+  }
+
+  /* Fading exits */
+@-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }
+
+
+
+
+
+/* ============== Navigation styling ======================== */
+#pcNavigation{
+    width: 100%;
+    background-color: var(--pcPrimaryColor);
+    min-height: 80px;
+}
+
+
+#pcNavigation .nav-item .nav-link,
+#pcNavigation .nav-item .nav-link:hover{
+    color:var(--pcTextSecondary);
+    font-size: 18px;
+}
+#pcNavigation .nav-item .nav-link:hover
+{   
+    font-weight: bold;
+}
+
+
+#pcNavigation .pc-sticky
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--pcPrimaryColor);
+    box-shadow: 0px 10px 30px rgba(155, 155, 155, 0.479);
+    z-index: 999;
+}
+
+.nav-item .pcBtnPrimary
+{
+    padding:0px 30px;
+}
+
+
+@media (max-width: 992px) {
+    #pcNavigation .pc-sticky .collapse
+    {
+        height: 100vh;
+    }
+}
+/* ============== Navigation styling ======================== */
+
+
+
+
+
+/* ============== Hero styling ======================== */
+#pcHero{
+    background-color: var(--pcPrimaryColor);
+}
+.heroImage img{
+    object-fit:cover;
+}
+
+
+#pcHero .heroInfo{
+    color: var(--pcTextSecondary);
+}
+#pcHero .heroInfo h2{
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+#pcHero .heroInfo p{
+    font-size: 1.5rem;
+    color: var(--pcTextSecondary);
+    margin-bottom: 20px;
+}
+#pcHero .heroInfo h2{
+    font-size: 5rem;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+@media (max-width: 992px) 
+{
+    #pcHero .heroInfo h2{
+        font-size: 2.5rem;
+    }
+    #pcHero .heroInfo p{
+        font-size: 1rem;
+    }
+    #pcHero .heroInfo h2{
+        font-size: 3.5rem;
+    }
+}
+/* ============== Hero styling ======================== */
+
+
+
+
+
+/* ============== Skills Styling ====================== */
+#pcSkills{
+    background-color: var(--pcSecondaryColor);
+    padding:50px 0px;
+}
+
+#pcSkills .content{
+    margin-top: 60px;
+}
+
+#pcSkills .content>div{
+    border: 1px solid rgba(255, 255, 255, 0.041);
+    padding: 25px 0px;
+    overflow: hidden;
+}
+#pcSkills .content>div:hover{
+    cursor: pointer;
+    border-color: white;
+    box-shadow: 1px 1px 2px 6px rgba(255, 255, 255, 0.082);
+}
+
+#pcSkills .content>div>h2{
+    color: var(--pcTextSecondary);
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#pcSkills .content>div>img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+#pcSkills .content>div:hover>img{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+/* ============== Skills Styling ====================== */
+
+
+
+
+/* ============== Services Styling ==================== */
+#pcServices{
+    background-color: var(--pcSecondaryColor);
+    padding: 50px 0px;
+}
+#pcServices .content{
+    margin-top: 60px;
+}
+
+#pcServices .content>div{
+    padding: 10px;
+    overflow: hidden;
+}
+#pcServices .content>div:hover{
+    padding: 10px;
+    cursor: pointer;
+}
+#pcServices .content>div:hover img{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+#pcServices .content>div>div{
+    width: 100%;
+    height: 100%;
+    border:1px solid rgba(255, 255, 255, 0.192);
+    padding: 25px 0px;
+}
+#pcServices .content>div:hover>div{
+    border-color: white;
+    box-shadow: 1px 1px 2px 6px rgba(255, 255, 255, 0.082);
+}
+
+#pcServices .content img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 90%;
+    height: 200px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+#pcServices .content h2{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+/* ============== Services Styling ==================== */
+
+
+
+
+
+
+
+
+
+/* ============================== Gallery Starts here ========================================= */
+#prev-work{
+    background-color: var(--pcSecondaryColor);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#prev-work .content{
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+#prev-work .card-columns div
+{
+    display: none;
+    overflow: hidden;
+}
+
+
+#prev-work .card-columns .us-show
+{
+    display: inline-block;
+    max-width: 250px;
+    height: 200px;
+}
+
+
+/* Button setting goes here */
+.us-btn-gallary
+{
+  padding: inherit 10px;
+  background-color: white;
+  border-radius: 0px;
+  color: rgba(0, 0, 0, 0.534);
+  min-width: 120px;
+  margin-right: 10px;
+}
+.us-btn-gallary:hover
+{
+    background-position-x: 0%;
+  transition: all 0.5s ease-out;
+}
+/* active button */
+.us-btn-gallary.us-gal-link-active
+{
+  background-color: var(--pcTextPrimary);
+  color: white;
+  font-weight: bolder;
+}
+.us-btn-gallary:hover.us-gal-link-active
+{
+  background-image: none;
+}
+
+
+/* Setting responsive number of column */
+@media (max-width: 992px) 
+{
+    .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      -webkit-column-gap: 1.25rem;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+      orphans: 1;
+      widows: 1;
+    }
+    .card-columns .card {
+      display: inline-block;
+      width: 100%;
+    }
+}
+
+@media (max-width: 576px) 
+{
+    .card-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      -webkit-column-gap: 1.25rem;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+      orphans: 1;
+      widows: 1;
+    }
+    .card-columns .card {
+      display: inline-block;
+      width: 100%;
+    }
+
+    #prev-work .card-columns
+    {
+        padding: 80px;
+    }
+}
+
+@media (max-width: 450px) 
+{
+    #prev-work .card-columns
+    {
+        padding: 0px;
+    }
+}
+
+
+
+.gallery-contain
+{
+    padding-top: 20px;
+}
+
+.us-additional
+{
+  width: 400px;
+  overflow: hidden;
+}
+.us-additional img
+{
+  width: 100%;
+  transform: translateY(0%);
+}
+.us-additional:hover img
+{
+    transition: transform 1s ease-in;
+    transform: translateY(-75%);
+}
+
+
+.gallary-toggle
+{
+  width: 100%;
+  text-align: center;
+}
+.gallary-toggle::after
+{
+  content: "";
+  display: block;
+  max-width: 50%;
+  height: 3px;
+  background-color:#DFCD50;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+/* ============================== Gallery Ends here ========================================= */
+
+
+
+
+
+/* ============================== FAQ Section Goes Here ==================================== */
+#pcFaq{
+    background-color: var(--pcSecondaryColor);
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+#pcFaq .content>div>img{
+    object-fit: cover;
+    width: 100%;
+}
+
+
+#pcFaq .accordion-button{
+    color: white;
+    font-weight: bold;
+}
+#pcFaq .accordion-item{
+    background-color: var(--pcTextPrimary);
+    color: white;
+}
+#pcFaq .accordion-button:not(.collapsed){
+    background-color: var(--pcTextPrimary);
+    color: white;
+    font-weight: bolder;
+}
+#pcFaq .accordion-item>div{
+    background-color: var(--pcSecondaryColor);
+    border: 1px solid rgba(255, 255, 255, 0.205);
+}
+/* ============================== FAQ Section Goes Here ==================================== */
+
+
+/* ============================== Footer =================================================== */
+#pcFooter{
+    background-color: var(--pcSecondaryColor);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.253);
+    width: 100%;
+}
+#pcFooter .row>div{
+    padding-top: 40px;
+}
+
+#pcFooter .socials{
+    width: 100%;
+}
+#pcFooter .social{
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.521);
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 20px;
+}
+#pcFooter .social:hover{
+    border-color: white;
+}
+#pcFooter .social img{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+#pcFooter .social:hover img{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+
+#pcFooter .content h2{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+/* ============================== Footer =================================================== */
+
+
+
+
+/* ==================== Modal ======================================= */
+.pcModal .modal-content{
+    background-color: var(--pcSecondaryColor);
+}
+.pcModal .modal-header .btn-close{
+    color: white  !important;
+}
+
+
+.pcModal .hireMe a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    padding: 20px;
+}
+.pcModal .hireMe a:hover{
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 1px 1px 2px 6px rgba(255, 255, 255, 0.082);
+}
+
+.pcModal .followMe{
+    margin-top: 50px;
+    width: 100%;
+}
+.pcModal .followMe a{
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.521);
+    width: 100%;
+    height: 100%;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 20px;
+}
+.pcModal .followMe a:hover{
+    border: 1px solid rgba(255, 255, 255, 0.904);
+    background-color: white;
+    box-shadow: 1px 1px 2px 6px rgba(255, 255, 255, 0.082);
+}
+
+.btn-close{
+    background:transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255, 255, 255, 0.904)'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat
+}
+/* ==================== Modal ======================================= */
